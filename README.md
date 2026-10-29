@@ -36,11 +36,8 @@ New to the code? Start with `GUIDE.md`.
 
 ```
 src/                    model code
-analysis/               scripts that run simulations and make figures
-analysis/sensitivity/   one-parameter sensitivity analyses
-figures/                scripts that draw paper figures from saved results
 docs/                   parameter sources
-results/                output of all scripts (empty in the repository)
+results/                output folder (empty in the repository)
 ```
 
 ## Installation and a first run
@@ -49,16 +46,11 @@ Python 3.10 or newer.
 
 ```bash
 pip install -r requirements.txt
-python analysis/plot_healthy_lit_comparison_3scenarios.py
 ```
 
-Every script finds `src/` by itself, so it can be started from any
-folder. All output (figures, CSV files, cache files) is written to
-`results/`.
-
-Run time: a single scenario takes seconds to a few minutes. The heatmap
-and sensitivity scripts run the model many times and can take hours;
-they save their results in a cache file and reuse it.
+See `GUIDE.md` (section 3) for a short example that runs a steady state
+and a furosemide scenario. Run time: a single scenario takes seconds to
+a few minutes.
 
 ## Files in `src/`
 
@@ -76,20 +68,11 @@ they save their results in a cache file and reuse it.
 | `scenario_manager.py` | named scenarios, e.g. `set_scenario("CKD_WITH_DRUG")` |
 | `parameter_audit.py` | prints a check of the parameters before each run |
 
-## Scripts in `analysis/` and `figures/`
+## Analysis scripts
 
-| Script | Result |
-|---|---|
-| `analysis/plot_healthy_lit_comparison_3scenarios.py` | healthy: no furosemide / furosemide without interaction / with interaction |
-| `analysis/plot_ckd_lit_comparison_3scenarios.py` | the same for CKD-5 |
-| `analysis/plot_furosemide_pk_ckd_vs_healthy.py` | furosemide PK, healthy versus CKD-5 |
-| `analysis/plot_clearance_flux_decomposition.py` | share of filtration, passive diffusion, OAT1 uptake and secretion |
-| `analysis/dose_response_tid_vs_qd.py` | 30 days of oral furosemide in CKD-5, three times daily versus once daily |
-| `analysis/heatmap_ki_vmax_sensitivity_ode.py` | Ki x OAT1 capacity in CKD-5 |
-| `analysis/heatmap_fu_sensitivity_ode.py` | unbound fraction of furosemide x unbound fraction of the toxins |
-| `analysis/sensitivity/*.py` | sensitivity to Ki, fu_p, dose and R0 |
-| `figures/make_three_way_comparison_figure.py` | model vs analytical estimate vs clinical data |
-| `figures/heatmap_ki_vmax_from_cache.py` | Ki x Vmax figure from the saved grid |
+The scripts used to run the simulations and make the figures of the
+paper are not included in this repository. They are available from the
+authors on request.
 
 ## Choice of Ki
 

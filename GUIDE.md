@@ -25,8 +25,7 @@ CKD stage 5.
 4. `src/constants.py` and `src/physiology.py`: flows and volumes.
 5. `src/scenario_manager.py` and `src/simulation.py`: how a run is set
    up and solved.
-6. `analysis/plot_healthy_lit_comparison_3scenarios.py`: a complete
-   example from steady state to figure.
+6. Section 3 below: a complete example from steady state to scenario.
 
 ## 3. How one simulation works
 
@@ -66,8 +65,7 @@ sol = run_sim(12.0, mode="ckd5", custom_initial_conds=ic, dt=0.05)
 C_IS = sol.y[IDX["C_tox1_cen"]]        # IS in the central compartment [mg/L]
 ```
 
-Run this from the `src/` folder, or add `src/` to `sys.path` as the
-analysis scripts do.
+Run this from the `src/` folder, or add `src/` to `sys.path`.
 
 ## 4. Key equations
 
