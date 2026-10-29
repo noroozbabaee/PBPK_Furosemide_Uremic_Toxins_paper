@@ -1,0 +1,21 @@
+# output of the scripts (results/ stays empty in the repository)
+results/*
+!results/.gitkeep
+
+# Python
+__pycache__/
+*.py[cod]
+
+# virtual environments
+venv/
+.venv/
+
+# editors and operating systems
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+analysis/
+figures/
+analysis/
+figures/

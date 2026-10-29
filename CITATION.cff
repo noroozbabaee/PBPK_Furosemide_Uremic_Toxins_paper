@@ -1,0 +1,23 @@
+cff-version: 1.2.0
+message: "If you use this code, please cite it as below."
+type: software
+title: "Kidney PBPK model of furosemide and protein-bound uremic toxins"
+abstract: >-
+  Mechanistic kidney physiologically based pharmacokinetic (PBPK) model of
+  furosemide and the protein-bound uremic toxins indoxyl sulfate, hippuric
+  acid and p-cresyl sulfate, with competitive inhibition of OAT1-mediated
+  tubular uptake by furosemide, for healthy and CKD stage 5 conditions.
+authors:
+  - family-names: Noroozbabaee
+    given-names: Leyla
+    affiliation: "Maastricht Centre for Systems Biology (MaCSBio), Faculty of Science and Engineering, Maastricht University, Maastricht, The Netherlands"
+date-released: 2026-10-21
+keywords:
+  - PBPK
+  - kidney
+  - chronic kidney disease
+  - uremic toxins
+  - furosemide
+  - OAT1
+  - drug-toxin interaction
+license: MIT
